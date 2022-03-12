@@ -1,18 +1,27 @@
-export default{
-    name:'experiences',
-    title:'Experiences',
+export default {
+    name: 'experiences',
+    title: 'Experiences',
     type: 'document',
-    fields:[
+    fields: [
         {
-            name:'year',
-            title:'Year',
-            type:'string'
+            name: 'year',
+            title: 'Year',
+            type: 'string'
         },
         {
-            name:'works',
-            title:'Works',
-            type:'array',
-            of:[{ type:'workExperience'}]
+            name: 'works',
+            title: 'Works',
+            type: 'array',
+            of: [{ type: 'workExperience' }]
         },
+    ],
+    orderings: [
+        {
+            title: 'Year',
+            name: 'yearDesc',
+            by: [
+                { field: 'year', direction: 'asc' }
+            ]
+        }
     ]
 }
